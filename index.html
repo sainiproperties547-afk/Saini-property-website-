@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saini Properties | Flat Hi Flat | Delhi-NCR Property Services</title>
+  <meta name="description" content="Saini Properties by Naveen Saini offers property collaboration on commission basis in Delhi-NCR. Explore shops, makan, DDA flats, and godowns." />
+  <meta name="keywords" content="DDA Flats Delhi-NCR, Property Collaboration Naveen Saini, Godowns for rent in Delhi, Delhi NCR property dealer, commercial shops Delhi" />
+  <meta name="author" content="Saini Properties" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Saini Properties | Flat Hi Flat" />
+  <meta property="og:description" content="Delhi-NCR property collaboration, shops, houses, DDA flats, and godowns by Naveen Saini." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="hero-house.jpg" />
+  <meta property="og:locale" content="en_IN" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Saini Properties",
+    "description": "Property collaboration on commission basis in Delhi-NCR. Services include shops, houses, DDA flats, and godowns.",
+    "telephone": ["+91-9999005638", "+91-9310462467"],
+    "areaServed": "Delhi-NCR",
+    "founder": "Naveen Saini",
+    "brand": "Saini Properties",
+    "slogan": "Flat Hi Flat",
+    "url": "#"
+  }
+  </script>
+
+  <style>
+    :root {
+      --red: #cc0000;
+      --yellow: #ffd700;
+      --white: #ffffff;
+      --black: #111111;
+      --dark: #1d1d1d;
+      --muted: #666666;
+      --blue: #0a4ea3;
+      --blue-dark: #08397a;
+      --bg: #fffaf3;
+      --card: #ffffff;
+      --border: rgba(0, 0, 0, 0.08);
+      --shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+      --radius: 18px;
+      --container: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--container));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: 1px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 2px solid transparent;
+      transition: 0.25s ease;
+      cursor: pointer;
+      font-size: 0.96rem;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: var(--white);
+      box-shadow: 0 10px 30px rgba(204, 0, 0, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #a80000;
+    }
+
+    .btn-secondary {
+      background: var(--yellow);
+      color: var(--black);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      background: #f0c900;
+    }
+
+    /* Smooth Scroll Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered delays for grids */
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 86px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .brand-title {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      color: var(--red);
+    }
+
+    .brand-tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #222;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav a {
+      font-weight: 700;
+      color: #333;
+      position: relative;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 3px;
+      background: var(--yellow);
+      transition: width 0.25s ease;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .call-chip {
+      background: var(--red);
+      color: var(--white);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      white-space: nowrap;
+      transition: 0.25s ease;
+    }
+
+    .call-chip:hover {
+      background: #a80000;
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      align-items: center;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+        url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80") center/cover no-repeat;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(255, 215, 0, 0.22), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(204, 0, 0, 0.26), transparent 30%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(100%, 800px);
+      padding: 60px 0;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(3.5rem, 10vw, 8rem);
+      line-height: 0.95;
+      letter-spacing: 2px;
+      color: var(--yellow);
+      text-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      animation: pulseText 2.8s infinite ease-in-out;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      margin: 18px 0 12px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      max-width: 660px;
+      color: rgba(255, 255, 255, 0.92);
+      margin-bottom: 28px;
+      font-size: 1.02rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    @keyframes pulseText {
+      0%, 100% { transform: translateY(0px); text-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); }
+      50% { transform: translateY(-4px); text-shadow: 0 10px 40px rgba(255, 215, 0, 0.18); }
+    }
+
+    .overview-grid,
+    .property-grid,
+    .contact-grid,
+    .footer-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .property-grid {
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 30px;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1.1fr 1fr;
+      align-items: start;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1.1fr 0.8fr 0.8fr;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .property-card {
+      position: relative;
+      overflow: hidden;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .property-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .property-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -20px -20px auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(255, 215, 0, 0.16);
+      z-index: 0;
+    }
+
+    .property-card * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .icon-wrap {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, var(--red), #ff5959);
+      color: var(--white);
+      font-size: 1.7rem;
+      box-shadow: 0 10px 24px rgba(204, 0, 0, 0.22);
+    }
+
+    .property-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #191919;
+    }
+
+    .property-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .services-banner {
+      background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 40px;
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .services-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .services-list li {
+      list-style: none;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 14px 16px;
+      border-radius: 14px;
+      border-left: 4px solid var(--yellow);
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+
+    .services-list li:hover {
+      transform: translateX(5px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .form-wrap {
+      background: var(--card);
+      border-radius: 22px;
+      padding: 32px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .form-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: var(--red);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .full-span {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      outline: none;
+      font: inherit;
+      transition: border-color 0.2s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--red);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-info {
+      padding: 20px;
+    }
+
+    .contact-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 20px 0 22px;
+    }
+
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: #fff2f2;
+      color: var(--red);
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid rgba(204, 0, 0, 0.12);
+    }
+
+    .owner-box {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .owner-item {
+      padding: 16px;
+      border-radius: 14px;
+      background: #fafafa;
+      border: 1px solid var(--border);
+    }
+
+    .owner-item strong {
+      color: #111;
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.1rem;
+    }
+
+    .footer {
+      background: #161616;
+      color: rgba(255, 255, 255, 0.86);
+      padding: 60px 0 26px;
+    }
+
+    .footer h4 {
+      color: var(--white);
+      margin-bottom: 14px;
+      font-size: 1.1rem;
+    }
+
+    .footer p,
+    .footer li,
+    .footer a {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+    }
+
+    .footer ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer .brand-title {
+      color: var(--yellow);
+    }
+
+    .footer-bottom {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #25d366;
+      color: #fff;
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
+      z-index: 1100;
+      font-size: 1.7rem;
+      transition: 0.25s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px) scale(1.05);
+    }
+
+    @media (max-width: 1100px) {
+      .nav-wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12px 0;
+      }
+
+      .nav {
+        order: 3;
+        width: 100%;
+      }
+
+      .property-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid,
+      .services-banner,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .section {
+        padding: 62px 0;
+      }
+
+      .hero {
+        min-height: 86vh;
+      }
+
+      .property-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-actions {
+        justify-content: center;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .brand {
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="Saini Properties Home">
+        <span class="brand-title">SAINI PROPERTIES</span>
+        <span class="brand-tag">Flat Hi Flat.</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#properties">Properties</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="call-chip" href="tel:+919999005638">Call Now: 9999005638</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero reveal" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="badge-row">
+            <span class="badge">Delhi-NCR Property Deals</span>
+            <span class="badge">Commercial & Residential</span>
+            <span class="badge">Trusted Real Estate</span>
+          </div>
+
+          <h1>FLAT HI FLAT</h1>
+          <h2>Your Trusted Property Partner in Delhi-NCR</h2>
+          <p>We specialize in commission-based property collaboration, offering the best deals on residential houses, commercial shops, DDA flats, and large-scale godowns.</p>
+          
+          <div class="hero-actions">
+            <a href="#properties" class="btn btn-primary">Explore Properties</a>
+            <a href="#contact" class="btn btn-secondary">Contact Us Today</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="properties">
+      <div class="container">
+        <h2 class="section-title reveal">Premium Properties</h2>
+        <p class="section-subtitle reveal">Explore our diverse portfolio of residential and commercial spaces tailored to fit your specific requirements.</p>
+
+        <div class="property-grid">
+          <div class="card property-card reveal delay-1">
+            <div class="icon-wrap">🏢</div>
+            <h3>DDA Flats</h3>
+            <p>Secure, well-located, and highly demanded DDA flats available across prime Delhi-NCR locations for immediate move-in or investment.</p>
+          </div>
+          <div class="card property-card reveal delay-2">
+            <div class="icon-wrap">🏪</div>
+            <h3>Commercial Shops</h3>
+            <p>High-footfall commercial retail spaces perfect for scaling your business in bustling market areas.</p>
+          </div>
+          <div class="card property-card reveal delay-3">
+            <div class="icon-wrap">🏭</div>
+            <h3>Godowns / Warehouses</h3>
+            <p>Spacious, accessible, and secure godowns tailored for logistics, storage, and industrial requirements.</p>
+          </div>
+          <div class="card property-card reveal delay-4">
+            <div class="icon-wrap">🏡</div>
+            <h3>Independent Makan</h3>
+            <p>Spacious independent houses and builder floors designed for comfortable, modern family living.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services" style="background: #fff;">
+      <div class="container">
+        <h2 class="section-title reveal">Our Services</h2>
+        <p class="section-subtitle reveal">We bridge the gap between buyers, sellers, and renters with transparent and efficient property solutions.</p>
+
+        <div class="services-banner reveal">
+          <div>
+            <h3 style="font-size: 2rem; margin-bottom: 10px; color: var(--yellow);">Collaboration on Commission</h3>
+            <p>At Saini Properties, we believe in mutually beneficial partnerships. We facilitate seamless property transactions with clear, upfront commission structures, ensuring all parties get the best possible value.</p>
+          </div>
+          <ul class="services-list">
+            <li>✅ Property Buying & Selling</li>
+            <li>✅ Residential & Commercial Renting</li>
+            <li>✅ Builder Floor Collaborations</li>
+            <li>✅ Legal Documentation Assistance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="form-wrap reveal">
+            <h3 class="form-title">Send Us a Message</h3>
+            <form action="#" method="POST">
+              <div class="form-grid">
+                <div>
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+                <div>
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required>
+                </div>
+                <div class="full-span">
+                  <label for="interest">Interested In</label>
+                  <select id="interest">
+                    <option>Buying a Property</option>
+                    <option>Selling a Property</option>
+                    <option>Renting a Space</option>
+                    <option>General Inquiry</option>
+                  </select>
+                </div>
+                <div class="full-span">
+                  <label for="message">Message</label>
+                  <textarea id="message" placeholder="Tell us what you are looking for..."></textarea>
+                </div>
+                <div class="full-span">
+                  <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-info reveal delay-2">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have a property in mind? Or looking to list yours? Reach out to Naveen Saini and the team today.</p>
+            
+            <div class="contact-pills">
+              <a href="tel:+919999005638" class="contact-pill">📞 +91 9999005638</a>
+              <a href="tel:+919310462467" class="contact-pill">📞 +91 9310462467</a>
+            </div>
+
+            <div class="owner-box">
+              <div class="owner-item">
+                <strong>Main Office</strong>
+                <p>Delhi-NCR region. Call to schedule a direct site visit or office appointment.</p>
+              </div>
+              <div class="owner-item">
+                <strong>Founder</strong>
+                <p>Naveen Saini</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="brand-title" style="display: block; margin-bottom: 15px;">SAINI PROPERTIES</span>
+          <p>Your premier destination for transparent and reliable real estate deals across the Delhi-NCR region.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Details</h4>
+          <ul>
+            <li>Naveen Saini</li>
+            <li>Ph: +91 9999005638</li>
+            <li>Ph: +91 9310462467</li>
+            <li>Serving Delhi-NCR</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Saini Properties. All Rights Reserved.</p>
+        <p>Flat Hi Flat.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919999005638" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const reveals = document.querySelectorAll(".reveal");
+
+      const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+      };
+
+      const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            return;
+          } else {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, revealOptions);
+
+      reveals.forEach(reveal => {
+        revealOnScroll.observe(reveal);
+      });
+    });
+  </script>
+</body>
+</html>
